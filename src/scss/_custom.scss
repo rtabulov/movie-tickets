@@ -11,10 +11,19 @@ body {
   background-color: #1c1a29;
 }
 
-.swiper-wrapper {
-  align-items: stretch;
-}
-
 .swiper-slide {
   height: auto;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }

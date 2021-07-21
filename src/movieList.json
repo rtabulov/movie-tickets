@@ -1,0 +1,23 @@
+{
+  "1": {
+    "id": 1,
+    "img": "src/assets/movie-slider-1.jpg",
+    "name": "Inception",
+    "rating": 8.9,
+    "categories": ["Sci-fi", "Drama"]
+  },
+  "2": {
+    "id": 2,
+    "img": "src/assets/movie-slider-2.jpeg",
+    "name": "Frozen 2",
+    "rating": 8.3,
+    "categories": ["Animation", "Drama"]
+  },
+  "3": {
+    "id": 3,
+    "img": "src/assets/movie-slider-3.png",
+    "name": "Ford v Ferrari",
+    "rating": 8.1,
+    "categories": ["Olahraga", "Drama"]
+  }
+}

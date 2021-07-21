@@ -1,6 +1,6 @@
 <template>
   <div class="overflow-hidden">
-    <div style="margin-left: -100px; margin-right: -100px">
+    <div style="margin-left: -160px; margin-right: -160px">
       <swiper :slides-per-view="3" :space-between="16" loop centered-slides>
         <swiper-slide v-for="(movie, idx) of movieList" :key="idx">
           <div
@@ -9,21 +9,21 @@
           >
             <img
               class="w-100"
-              style="height: 175px; object-fit: cover; object-position: center"
-              :src="movie.img"
+              style="height: 330px; object-fit: cover; object-position: center"
+              :src="getImageURL(movie.poster_path)"
               alt=""
             />
 
             <div class="p-3">
-              <h3 class="fs-5">{{ movie.name }}</h3>
+              <h3 class="fs-5">{{ movie.original_title }}</h3>
 
               <p>
                 <img class="me-1" src="src/assets/star.svg" alt="" />
-                {{ movie.rating }}
+                {{ movie.vote_average }}
               </p>
 
-              <p class="mb-0">
-                {{ movie.categories.join(', ') }}
+              <p class="mb-0 line-clamp-2">
+                {{ movie.genres.join(', ') }}
               </p>
             </div>
           </div>
@@ -44,6 +44,13 @@ export default {
     movieList: {
       type: Array,
       required: true,
+    },
+  },
+
+  methods: {
+    getImageURL(id) {
+      if (id) return `https://image.tmdb.org/t/p/w500${id}`;
+      return 'src/assets/noimage.png';
     },
   },
 };
