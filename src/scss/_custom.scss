@@ -10,9 +10,12 @@ body {
   color: rgba(255, 255, 255, 0.85);
   background-color: #1c1a29;
 }
+.swiper-wrapper {
+  align-items: stretch !important;
+}
 
 .swiper-slide {
-  height: auto;
+  height: auto !important;
 }
 
 .line-clamp-2 {

@@ -9,13 +9,13 @@
           >
             <img
               class="w-100"
-              style="height: 330px; object-fit: cover; object-position: center"
+              style="height: 300px; object-fit: cover; object-position: center"
               :src="getImageURL(movie.poster_path)"
               alt=""
             />
 
             <div class="p-3">
-              <h3 class="fs-5">{{ movie.original_title }}</h3>
+              <h3 class="fs-5 line-clamp-2">{{ movie.title }}</h3>
 
               <p>
                 <img class="me-1" src="src/assets/star.svg" alt="" />
