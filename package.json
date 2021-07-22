@@ -3,7 +3,9 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
-    "serve": "vite preview --host"
+    "serve": "vite preview --host",
+    "predeploy": "yarn build --base=/movie-tickets/",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -14,10 +16,8 @@
     "vue-router": "4"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^1.2.5",
-    "vite": "^2.4.2",
     "@fullhuman/postcss-purgecss": "^4.0.3",
-    "postcss": "^8.3.6",
+    "@vitejs/plugin-vue": "^1.2.5",
     "@vue/compiler-sfc": "^3.0.5",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.31.0",
@@ -25,6 +25,9 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-vue": "^7.14.0",
-    "sass": "^1.35.2"
+    "gh-pages": "^3.2.3",
+    "postcss": "^8.3.6",
+    "sass": "^1.35.2",
+    "vite": "^2.4.2"
   }
 }
