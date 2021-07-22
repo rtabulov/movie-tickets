@@ -30,3 +30,37 @@ body {
   -webkit-line-clamp: 3;
   overflow: hidden;
 }
+.tabs {
+  box-shadow: none;
+}
+.tabs__bar {
+  background-color: transparent;
+  box-shadow: none;
+  border-bottom: 0.3px solid rgba(255, 255, 255, 0.6);
+}
+.tabs__content {
+  background-color: transparent;
+  box-shadow: none;
+}
+.tabs__controls {
+  font-size: 20px;
+  line-height: 1;
+  font-weight: normal;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  &:hover {
+    background-color: transparent;
+  }
+  &.is-active {
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 700;
+  }
+}
+
+.tabs__line {
+  height: 1.5px;
+  background-color: #251977;
+  z-index: 10;
+  bottom: -1px;
+}

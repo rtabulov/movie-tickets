@@ -45,26 +45,44 @@
       </button>
     </div>
 
-    <div>
-      <div class="container">
-        <div class="d-flex">
-          <div style="width: 110px" class="me-3">
-            <img class="w-100" :src="getImageURL(movie.poster_path)" alt="" />
+    <div class="container">
+      <div class="d-flex">
+        <div style="width: 110px" class="me-3">
+          <img class="w-100" :src="getImageURL(movie.poster_path)" alt="" />
+        </div>
+        <div class="desc">
+          <div class="me-3 fw-bold">
+            <p>Director</p>
+            <p>Writer</p>
+            <p>Duration</p>
+            <p class="mb-0">Rating</p>
           </div>
-          <div class="desc">
-            <div class="me-3 fw-bold">
-              <p>Director</p>
-              <p>Writer</p>
-              <p>Duration</p>
-              <p class="mb-0">Rating</p>
-            </div>
 
-            <div class="flex-grow-1">
-              <p>{{ movie.director }}</p>
-              <p>{{ movie.screenplay }}</p>
-              <p>{{ duration }}</p>
-              <p class="mb-0">{{ movie.certification || 'NR' }}</p>
-            </div>
+          <div class="flex-grow-1">
+            <p>{{ movie.director }}</p>
+            <p>{{ movie.screenplay }}</p>
+            <p>{{ duration }}</p>
+            <p class="mb-0">{{ movie.certification || 'NR' }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="tabs">
+        <div class="tabs__bar-wrap">
+          <div class="tabs__bar">
+            <div class="tabs__controls">Schedule</div>
+            <div class="tabs__controls">Synopsis</div>
+          </div>
+        </div>
+        <div class="tabs__content">
+          <div class="tabs__section">I'm the first tab View</div>
+          <div class="tabs__section">
+            second tab - General<br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eos,
+            iusto laboriosam voluptatem at reiciendis vel, facilis repellendus
+            totam excepturi earum saepe rerum ullam!
           </div>
         </div>
       </div>
@@ -72,6 +90,8 @@
   </div>
 </template>
 <script>
+import TabsSlider from 'tabs-slider';
+
 import api from '../api';
 import { getImageURL } from '../helpers';
 
@@ -90,8 +110,19 @@ export default {
     },
   },
 
+  // updated() {
+  //   this.$nextTick(() => {
+  //     // eslint-disable-next-line no-new
+  //     new TabsSlider('.tabs');
+  //   });
+  // },
+
   async created() {
     this.movie = await api.getMovie(this.$route.params.id);
+    this.$nextTick(() => {
+      // eslint-disable-next-line no-new
+      new TabsSlider('.tabs');
+    });
   },
 
   methods: {

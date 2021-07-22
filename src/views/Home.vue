@@ -1,5 +1,6 @@
 <template>
   <app-header />
+  <app-navigation />
 
   <div class="container">
     <div class="d-flex justify-content-between align-items-center">
@@ -25,6 +26,7 @@
 <script>
 import HeroSlider from '../components/HeroSlider.vue';
 import PromoSlider from '../components/PromoSlider.vue';
+import AppNavigation from '../components/AppNavigation.vue';
 import AppHeader from '../components/AppHeader.vue';
 
 import promoList from '../promoList.json';
@@ -34,7 +36,7 @@ import api from '../api';
 export default {
   components: {
     AppHeader,
-
+    AppNavigation,
     HeroSlider,
     PromoSlider,
   },

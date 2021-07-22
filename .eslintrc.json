@@ -8,5 +8,7 @@
     "parser": "babel-eslint"
   },
   "extends": ["airbnb-base", "plugin:vue/vue3-recommended", "prettier"],
-  "rules": {}
+  "rules": {
+    "import/no-extraneous-dependencies": "off"
+  }
 }

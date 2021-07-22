@@ -25,7 +25,7 @@
               <h3 class="fs-5 line-clamp-2">{{ movie.title }}</h3>
 
               <p>
-                <img class="me-1" src="src/assets/star.svg" alt="" />
+                <img class="me-1" src="/src/assets/star.svg" alt="" />
                 {{ movie.vote_average }}
               </p>
 
