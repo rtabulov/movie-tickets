@@ -13,7 +13,7 @@
 
   <hero-slider v-if="movieList.length" class="mt-3" :movie-list="movieList" />
 
-  <div class="container py-5">
+  <div class="container mt-5">
     <h2>Promo</h2>
 
     <promo-slider :promos="$options.promoList" />

@@ -9,7 +9,7 @@
           >
             <img
               class="w-100"
-              style="height: 300px; object-fit: cover; object-position: center"
+              style="height: 270px; object-fit: cover; object-position: center"
               :src="getImageURL(movie.poster_path)"
               alt=""
             />
