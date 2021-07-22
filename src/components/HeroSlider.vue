@@ -1,7 +1,7 @@
 <template>
   <div class="overflow-hidden">
     <div style="margin-left: -160px; margin-right: -160px">
-      <swiper :slides-per-view="3" :space-between="16" loop centered-slides>
+      <swiper :slides-per-view="3" :space-between="16" centered-slides>
         <swiper-slide v-for="(movie, idx) of movieList" :key="idx">
           <div
             class="rounded-3 overflow-hidden"
