@@ -1,4 +1,4 @@
-import{y as t,s as e,u as s,c as i,a as r,t as n,q as a,F as o,p as h,x as l,v as c,z as d,r as v,o as u}from"./vendor.e27b753a.js";import{a as b,g as f,_ as g}from"./index.6d85e473.js";var m={exports:{}};
+import{y as t,s as e,u as s,c as i,a as r,t as n,q as a,F as o,p as h,x as l,v as c,z as d,r as v,o as u}from"./vendor.b134c00f.js";import{a as b,g as f,_ as g}from"./index.6d85e473.js";var m={exports:{}};
 /*!
  * @author ivan.kuzmichov@gmail.com
  * @source https://github.com/k-ivan/tabs-slider
