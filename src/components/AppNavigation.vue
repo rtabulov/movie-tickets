@@ -1,25 +1,37 @@
 <template>
   <div class="navigation">
-    <a href="#" class="navigation-item navigation-item--active">
+    <router-link
+      to="/"
+      class="navigation-item"
+      active-class="navigation-item--active"
+    >
       <img class="navigation-item__icon" src="src/assets/home.svg" alt="home" />
       <span class="navigation-item__title">Home</span>
-    </a>
-    <a href="#" class="navigation-item">
+    </router-link>
+    <router-link
+      to="/cinemas"
+      class="navigation-item"
+      active-class="navigation-item--active"
+    >
       <img
         class="navigation-item__icon"
         src="src/assets/cinema.svg"
         alt="cinemas"
       />
       <span class="navigation-item__title">Cinemas</span>
-    </a>
-    <a href="#" class="navigation-item">
+    </router-link>
+    <router-link
+      to="/tickets"
+      class="navigation-item"
+      active-class="navigation-item--active"
+    >
       <img
         class="navigation-item__icon"
         src="src/assets/ticket.svg"
         alt="tickets"
       />
       <span class="navigation-item__title">Tickets</span>
-    </a>
+    </router-link>
   </div>
 </template>
 
