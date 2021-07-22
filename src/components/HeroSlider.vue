@@ -2,9 +2,16 @@
   <div class="overflow-hidden">
     <div style="margin-left: -160px; margin-right: -160px">
       <swiper :slides-per-view="3" :space-between="16" centered-slides>
-        <swiper-slide v-for="(movie, idx) of movieList" :key="idx">
-          <div
-            class="rounded-3 overflow-hidden"
+        <swiper-slide v-for="movie of movieList" :key="movie.id">
+          <router-link
+            :to="`/movies/${movie.id}`"
+            class="
+              rounded-3
+              overflow-hidden
+              text-reset
+              d-block
+              text-decoration-none
+            "
             style="background: #38354b; height: 100%"
           >
             <img
@@ -26,7 +33,7 @@
                 {{ movie.genres.join(', ') }}
               </p>
             </div>
-          </div>
+          </router-link>
         </swiper-slide>
       </swiper>
     </div>
@@ -36,6 +43,7 @@
 <script>
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/swiper.scss';
+import { getImageURL } from '../helpers';
 
 export default {
   components: { Swiper, SwiperSlide },
@@ -47,11 +55,6 @@ export default {
     },
   },
 
-  methods: {
-    getImageURL(id) {
-      if (id) return `https://image.tmdb.org/t/p/w500${id}`;
-      return 'src/assets/noimage.png';
-    },
-  },
+  methods: { getImageURL },
 };
 </script>

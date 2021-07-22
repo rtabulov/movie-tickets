@@ -44,7 +44,7 @@
         </ul>
       </div>
       <div>
-        <img :src="'src/assets/bell.svg'" alt="" />
+        <img src="/src/assets/bell.svg" alt="" />
       </div>
     </div>
   </header>

@@ -1,7 +1,5 @@
 <template>
   <div class="min-vh-100" style="padding-bottom: 6rem">
-    <app-header />
-
     <app-navigation />
 
     <router-view></router-view>
@@ -9,12 +7,10 @@
 </template>
 
 <script>
-import AppHeader from './components/AppHeader.vue';
 import AppNavigation from './components/AppNavigation.vue';
 
 export default {
   components: {
-    AppHeader,
     AppNavigation,
   },
 };

@@ -5,7 +5,11 @@
       class="navigation-item"
       active-class="navigation-item--active"
     >
-      <img class="navigation-item__icon" src="src/assets/home.svg" alt="home" />
+      <img
+        class="navigation-item__icon"
+        src="/src/assets/home.svg"
+        alt="home"
+      />
       <span class="navigation-item__title">Home</span>
     </router-link>
     <router-link
@@ -15,7 +19,7 @@
     >
       <img
         class="navigation-item__icon"
-        src="src/assets/cinema.svg"
+        src="/src/assets/cinema.svg"
         alt="cinemas"
       />
       <span class="navigation-item__title">Cinemas</span>
@@ -27,7 +31,7 @@
     >
       <img
         class="navigation-item__icon"
-        src="src/assets/ticket.svg"
+        src="/src/assets/ticket.svg"
         alt="tickets"
       />
       <span class="navigation-item__title">Tickets</span>
