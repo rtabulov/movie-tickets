@@ -22,7 +22,7 @@
 
         <div class="rating mt-3">
           <img class="me-2" src="/src/assets/star.svg" alt="star" />
-          {{ movie.vote_average }} / 10 from TMDb
+          {{ averageVote }}
         </div>
 
         <div class="d-flex flex-wrap mt-3">
@@ -59,10 +59,10 @@
           </div>
 
           <div class="flex-grow-1">
-            <p>{{ movie.director }}</p>
-            <p>{{ movie.screenplay }}</p>
+            <p>{{ movie.director || 'not available' }}</p>
+            <p>{{ movie.screenplay || 'not available' }}</p>
             <p>{{ duration }}</p>
-            <p class="mb-0">{{ movie.certification || 'NR' }}</p>
+            <p class="mb-0">{{ movie.certification || 'not available' }}</p>
           </div>
         </div>
       </div>
@@ -104,9 +104,19 @@ export default {
 
   computed: {
     duration() {
+      if (this.movie.runtime === 0) {
+        return 'not available';
+      }
       return `${Math.floor(this.movie.runtime / 60)}h ${
         this.movie.runtime % 60
       }m`;
+    },
+    averageVote() {
+      const avg = this.movie.vote_average;
+      if (avg === 0) {
+        return 'not available';
+      }
+      return `${avg} / 10 from TMDb`;
     },
   },
 

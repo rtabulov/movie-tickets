@@ -53,9 +53,9 @@ class MovieAPI {
           data.credits.crew.find((item) => item.job === 'Screenplay')?.name ||
           data.credits.crew.find((item) => item.job === 'Writer')?.name;
 
-        const { certification } = data.release_dates.results
+        const certification = data.release_dates.results
           .find((item) => item.iso_3166_1 === 'US')
-          .release_dates.find((item) => item.type >= 3);
+          ?.release_dates.find((item) => item.type >= 3).certification;
         return {
           ...data,
           certification,
