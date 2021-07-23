@@ -13,7 +13,6 @@
       >
     </div>
   </div>
-
   <hero-slider v-if="movieList.length" class="mt-3" :movie-list="movieList" />
 
   <div class="container mt-5">
@@ -24,7 +23,8 @@
 </template>
 
 <script>
-import HeroSlider from '../components/HeroSlider.vue';
+import { defineAsyncComponent } from 'vue';
+
 import PromoSlider from '../components/PromoSlider.vue';
 import AppNavigation from '../components/AppNavigation.vue';
 import AppHeader from '../components/AppHeader.vue';
@@ -37,8 +37,10 @@ export default {
   components: {
     AppHeader,
     AppNavigation,
-    HeroSlider,
     PromoSlider,
+    HeroSlider: defineAsyncComponent(() =>
+      import('../components/HeroSlider.vue'),
+    ),
   },
 
   promoList,
